@@ -5,7 +5,7 @@
 -1;
 #X obj -44 12 openpanel;
 #X msg -44 34 open \$1;
-#X obj 150 150 image /Users/kicko_pro/Desktop/ot-logo/ot_logo-2.gif
+#X obj 150 150 image ot_logo-2.gif
 ;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
