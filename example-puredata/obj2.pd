@@ -1,0 +1,10 @@
+#N canvas 31 23 322 181 10;
+#N canvas 480 386 450 300 obj2 1;
+#X obj -197 46 plot array2 900 0 0 0 0;
+#X obj -196 21 struct obj2 float x float y array array2 tri2;
+#X restore -52 56 pd obj2;
+#N canvas 432 466 450 300 tri2 1;
+#X obj -196 72 drawnumber no 1 1 999;
+#X obj -196 15 struct tri2 float x float y float no;
+#X obj -196 44 filledpolygon 900 0 1 0 0 0 27 27 0;
+#X restore -47 119 pd tri2;
