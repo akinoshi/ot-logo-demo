@@ -94,9 +94,9 @@
             (vector 0 0 0 0.0001)))
         "c"))
 
-(define centor (build-cube))
-(with-primitive centor (hide 1))
-(lock-camera centor)
-(with-primitive centor
+(define center (build-cube))
+(with-primitive center (hide 1))
+(lock-camera center)
+(with-primitive center
     (rotate (vector 0 0 -22.5))
     (rotate (vector 45 0 0)))

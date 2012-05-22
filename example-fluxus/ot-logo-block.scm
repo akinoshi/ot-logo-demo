@@ -95,10 +95,10 @@
 
 (setup-tri-rev tri-rev-pos)
 
-(define centor (build-cube))
-(with-primitive centor (hide 1))
-(lock-camera centor)
+(define center (build-cube))
+(with-primitive center (hide 1))
+(lock-camera center)
 
-(with-primitive centor
+(with-primitive center
     (rotate (vector 0 -22.5 0))
     (rotate (vector -60 0 0)))
