@@ -2,27 +2,32 @@ A collection of FLOSS+Art demos to create new OpenLabTaipei logo.
 
 [Demos]
 
-(1) example-inkscape by Honki (demonstrator)
+(1) example-inkscape by Honki (presenter)
 
 The original logo design using vector graphics.
 http://dl.dropbox.com/u/5870188/ot%20logo/ot07.svg
 http://dl.dropbox.com/u/5870188/ot%20logo/ot_logo.svg
 
-(2) example-fluxus by Aki (demonstrator)
+(2) example-fluxus by Aki (presenter)
 
 Couple fluxus scripts to create new OpenLabTaipei logo.
 https://vimeo.com/41852397
 
-(3) example-processing by Shengpo (demonstrator)
+(3) example-processing by Shengpo (presenter)
 
 ot_logo_sodaplay by Aki
 OT_logo by Shengpo
 http://www.facebook.com/download/425050954180330/OT_logo.zip
 
-(4) example-puredata by Aluan (demonstrator)
+(4) example-puredata by Aluan (presenter)
 
 otlogo by Aluan
 http://dl.dropbox.com/u/8772021/otlogo.zip
+
+(5) example-contextfree by Aki
+
+ot_logo.cfdg
+ot_logo_rec.cfdg
 
 [Links]
 
@@ -43,3 +48,9 @@ http://processing.org/
 
 Pure Data
 http://puredata.info/
+
+Context Free Art
+http://www.contextfreeart.org/
+
+ImageMagick
+http://www.imagemagick.org/script/index.php

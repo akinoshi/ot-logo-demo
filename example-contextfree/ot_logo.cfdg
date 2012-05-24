@@ -1,0 +1,131 @@
+// File: ot_logo.cfdg
+// ------------------
+// This script generates new OT logo using Context Free program.
+//
+// Generate image
+// $ cfdg ot_logo.cfdg ot_logo.png
+//
+// Create initial GIF image
+// $ convert -size 500x500 xc:'#ffed00' ot_logo00.gif
+//
+// Create animated GIF image
+// $ convert -delay 5 -loop 0 ot_logo*.gif animate_ot_logo.gif
+//
+// Tweener easing equation : easeInSine
+// scale = -c * cos(t/d * PI/2) + c + b
+//
+// t	Current time (in frames or seconds)
+// b	Starting value
+// c	Change needed in value
+// d	Expected easing duration (in frames or seconds)
+//
+//	t	b	c	d	scale	file name(s)
+// -------------------------------------------------------------------------
+// 	1	0	30	12	0.2567 	ot_logo01.gif, ot_logo23.gif
+// 	2	0	30	12	1.0222 	ot_logo02.gif, ot_logo22.gif
+// 	3 	0	30	12	2.2836 	ot_logo03.gif, ot_logo21.gif
+// 	4	0	30	12	4.0192 	ot_logo04.gif, ot_logo20.gif
+//	5	0	30	12	6.1994	ot_logo05.gif, ot_logo19.gif 
+//	6	0	30	12	8.7868 	ot_logo06.gif, ot_logo18.gif
+//	7	0	30	12	11.7372 ot_logo07.gif, ot_logo17.gif
+//	8	0	30	12	15.0000 ot_logo08.gif, ot_logo16.gif
+//	9	0	30	12	18.5195 ot_logo09.gif, ot_logo15.gif
+//	10	0	30	12	22.2354 ot_logo10.gif, ot_logo14.gif
+//	11	0	30	12	26.0842 ot_logo11.gif, ot_logo13.gif
+//	12	0	30	12	30.0000	ot_logo12.gif
+//
+// Context Free Art
+// http://www.contextfreeart.org/
+//
+// Tweener
+// http://code.google.com/p/tweener/
+//
+// ImageMagick
+// http://www.imagemagick.org/script/index.php
+//
+// Author: Akinori Kinoshita
+// E-mail: art.akinoshi -at- gmail.com
+// Date: Thu May 24 11:02:59 CST 2012
+
+startshape OTLOGO
+
+background { hue 56 sat 1 b 1 }
+
+rule OTLOGO {
+	PATH { x -90 y 60 }
+}
+
+rule PATH {
+	U { }
+	L { x 30 }
+	L { x 60 }
+	L { x 90 }
+	L { x 120 }
+	J { x 120 }
+	U { x 150 }
+	L { x 180 }
+	B { x 180 }
+	J { x 150 y -30 }
+	L { x 180 y -60 }
+	J { x 180 y -60 }
+	H { x 180 y -60 }
+	K { x 180 y -60 }
+	H { x 150 y -30 }
+	B { x 120 y -60 }
+	B { x 90 y -90 }
+	B { x 60 y -120 }
+	H { x 30 y -120 }
+	K { x 30 y -120 }
+	U { x 30 y -90 }
+	J { x 30 y -90 }
+	U { x 60 y -90 }
+	U { x 90 y -60 }
+	U { x 120 y -30 }
+	H { x 120 }
+	K { x 120 }
+	B { x 90 }
+	B { x 60 y -30 }
+	L { x 60 y -60 }
+	B { x 60 y -60 }
+	H { x 30 y -60 }
+	H { y -60 }
+	K { y -60 }
+	L { y -60 }
+	U { x 30 y -30 }
+	H { x 30 }
+	B { y -30 }
+	K { y -30 }
+
+}
+
+rule LINE {
+	TRIANGLE [ s 1 30.0000 ]	// <===== Change the scale here
+}
+
+rule DIAGONAL {
+	TRIANGLE [ s 1 ( 30.0000 * sqrt(2)) ]	// <===== Change the scale here
+}
+
+rule K {
+	LINE { }
+}
+
+rule J {
+	LINE { y    8 x 30 r 180 }
+}
+
+rule L {
+	LINE { y   18 x 10 r -90 }
+}
+
+rule H {
+	LINE { y - 10 x 20 r  90 }
+}
+
+rule U {
+	DIAGONAL { x 10 r -45 }
+}
+
+rule B {
+	DIAGONAL { x 20 y 10 r -45 f 1 }
+}
